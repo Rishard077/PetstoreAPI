@@ -35,7 +35,7 @@ it ("user should be able to get users by user name",async()=>{
 
 })
 
-it.('User should be able to update user data',async()=>{
+it('User should be able to update user data',async()=>{
     response= await updateUser(updateUserData,username)
     expect(response.status).to.equal(200)
 
