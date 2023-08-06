@@ -17,7 +17,7 @@ describe('User Tests',()=>{
 
  })
 
-it.only('Should be able to create a new user ',async()=>{
+it('Should be able to create a new user ',async()=>{
 
  response = await createUser(userData,username)
  expect(response.status).to.equal(200)  
@@ -25,7 +25,7 @@ it.only('Should be able to create a new user ',async()=>{
  
 })
 
-it.only ("user should be able to get users by user name",async()=>{
+it ("user should be able to get users by user name",async()=>{
  response = await getUser(username)
  expect(response.status).to.equal(200)
  expect(response.body.username).to.equal(username)
@@ -35,7 +35,7 @@ it.only ("user should be able to get users by user name",async()=>{
 
 })
 
-it.only('User should be able to update user data',async()=>{
+it.('User should be able to update user data',async()=>{
     response= await updateUser(updateUserData,username)
     expect(response.status).to.equal(200)
 
