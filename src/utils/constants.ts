@@ -22,6 +22,8 @@ export const user ={
     AUTH:'/user/login',
     USERNAME:'username',
     PASSWORD:'password',
-    LOGOUT:'/user/logout'
+    LOGOUT:'/user/logout',
+    CREATE_WITH_ARRAY:'/user/createWithArray',
+    CREATE_WITH_LIST:'/user/createWithList'
 }
 
