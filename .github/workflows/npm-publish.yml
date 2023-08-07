@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Petstore API Automation
 
 on:
   workflow_dispatch:
