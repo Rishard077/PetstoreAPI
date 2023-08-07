@@ -86,12 +86,12 @@ describe('User Tests', () => {
         expect(response.body.username).to.equal(listUserName2)
         
     })
-    it.only('Should be able to create a new user with Array ', async () => {
+    it('Should be able to create a new user with Array ', async () => {
         response = await createWithArray(userDataArray)
         expect(response.status).to.equal(200)
     })
 
-    it.only('User should be able to get a user  created with Array', async () => {
+    it('User should be able to get a user  created with Array', async () => {
         response = await getUser(arraytUserName1)
         expect(response.status).to.equal(200)
         expect(response.body.username).to.equal(arraytUserName1)
@@ -99,7 +99,7 @@ describe('User Tests', () => {
     })
 
 
-    it.only('User should be able to get a user  created with Array', async () => {
+    it('User should be able to get a user  created with Array', async () => {
         response = await getUser(arrayUserName2)
         expect(response.status).to.equal(200)
         expect(response.body.username).to.equal(arrayUserName2)
