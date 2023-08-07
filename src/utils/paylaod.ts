@@ -1,4 +1,11 @@
+import { generateRandomUsername } from "../shared/users";
 import constants from "./constants"
+
+
+export const listUserName1= generateRandomUsername()
+export const listUserName2 =generateRandomUsername()
+export const arraytUserName1= generateRandomUsername();
+export const arrayUserName2 =generateRandomUsername()
 
 export const ADD_NEW_PET = {
 
@@ -77,3 +84,49 @@ export const updateUserData ={
     'userStatus': 0
   
 }
+
+export const userDataList =[
+    {
+      'id': 0,
+      'username': `${listUserName1}`,
+      'firstName': "string",
+      'lastName': "string",
+      'email': "string",
+      'password': "string",
+      'phone': "string",
+      'userStatus': 0
+    },
+    {
+        'id': 0,
+        'username': `${listUserName2}`,
+        'firstName': "string1",
+        'lastName': "string2",
+        'email': "string3",
+        'password': "string",
+        'phone': "string",
+        'userStatus': 0
+    }
+  ]
+
+  export const userDataArray =[
+    {
+      'id': 0,
+      'username': `${arraytUserName1}`,
+      'firstName': "string",
+      'lastName': "string",
+      'email': "string",
+      'password': "string",
+      'phone': "string",
+      'userStatus': 0
+    },
+    {
+        'id': 0,
+        'username': `${arrayUserName2}`,
+        'firstName': "string1",
+        'lastName': "string2",
+        'email': "string3",
+        'password': "string",
+        'phone': "string",
+        'userStatus': 0
+    }
+  ]

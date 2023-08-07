@@ -31,6 +31,15 @@ export const deleteUser = async (usernam: string) => {
     return supertest(constants.BASE_URL).delete(user.USER + '/' + usernam)
 }
 
+export const createWithList = async (userData: userList) => {
+return supertest(constants.BASE_URL).post(user.CREATE_WITH_LIST).send(userData)
+}
+
+export const createWithArray = async (userData: userList) => {
+    return supertest(constants.BASE_URL).post(user.CREATE_WITH_ARRAY).send(userData)
+    }
+
+
 export interface users {
     id: number
     username: string
@@ -42,8 +51,23 @@ export interface users {
     userStatus: number
 }
 
+
+export type userList = Root[]
+
+export interface Root {
+  id: number
+  username: string
+  firstName: string
+  lastName: string
+  email: string
+  password: string
+  phone: string
+  userStatus: number
+}
+
 export function generateRandomUsername(): string {
     const randomNumber = Math.floor(Math.random() * 1000);
-    const randomUsername = `user${randomNumber}`;
+    const timestamp = Date.now();
+    const randomUsername = `user_${timestamp}_${randomNumber}`;
     return randomUsername;
 }
